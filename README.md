@@ -76,7 +76,7 @@ public class BulletExplode : MonoBehaviour {
 }
 ```
 
-Script for the explosion `DestroyByTime.cs` (Attach to `Explosion` **prefab** & `Bullet` **prefab**)
+Script for the explosion and bullet `DestroyByTime.cs` (Attach to `Explosion` **prefab** & `Bullet` **prefab**)
 
 ```csharp
 using UnityEngine;

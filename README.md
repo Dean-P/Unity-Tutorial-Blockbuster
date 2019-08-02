@@ -4,7 +4,7 @@ PDF Tutorial on how to create this game can be found here [https://github.com/De
 
 The tutorial comes from the book from Packt publishing, which you are encouraged to buy and use for learning.
 
-Script for camera controls (attach to `MainCamera`)
+Script for camera controls `CameraMovement.cs` (attach to `MainCamera`)
 
 ```csharp
 using UnityEngine;
@@ -32,7 +32,7 @@ public class CameraMovement : MonoBehaviour {
 }
 ```
 
-Script for shooting (Attach to `MainCamera`):
+Script for shooting `ShootBullet.cs` (Attach to `MainCamera`):
 
 ```csharp
 using UnityEngine;
@@ -55,7 +55,28 @@ public class ShootBullet : MonoBehaviour {
 }	
 ```
 
-Script for the bullet (Attach to `Bullet`)
+Script for the bullet `BulletExplode.cs` (Attach to `Bullet` **prefab**)
+
+```csharp
+using UnityEngine;
+using System.Collections;
+
+public class BulletExplode : MonoBehaviour {
+
+	public GameObject explosion;
+
+	// detects collision with the box, destroys bullet and creates explosion
+	void OnCollisionEnter(Collision other) {
+		print ("Collideed");
+		Instantiate (explosion, transform.position, transform.rotation);
+		Destroy (gameObject);
+	}
+
+
+}
+```
+
+Script for the explosion and bullet `DestroyByTime.cs` (Attach to `Explosion` **prefab** & `Bullet` **prefab**)
 
 ```csharp
 using UnityEngine;

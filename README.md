@@ -21,7 +21,9 @@ The tutorial comes from the book from Packt publishing, which you are encouraged
 # Attach Scripts
 
 Scripts are found in `Assets/Mine/Scripts`
+
 Prefab objects are found in `Assets/Mine/Prefabs`
+
 
 1. Attach script for camera controls `CameraMovement.cs` to `MainCamera`
     - You will need to set the value of `speed` to something above 0

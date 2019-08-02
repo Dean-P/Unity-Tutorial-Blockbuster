@@ -21,12 +21,14 @@ The tutorial comes from the book from Packt publishing, which you are encouraged
 # Attach Scripts
 
 Scripts are found in `Assets/Mine/Scripts`
+
 Prefab objects are found in `Assets/Mine/Prefabs`
+
 
 1. Attach script for camera controls `CameraMovement.cs` to `MainCamera`
     - You will need to set the value of `speed` to something above 0
     
-2. Attach script for shooting `ShootBullet.cs` `MainCamera`
+2. Attach script for shooting `ShootBullet.cs` to `MainCamera`
     - You will need to set the value of `projectile` to the Bullet **prefab (in the Prefabs folder)**
     
 3. Attach script for the bullet `BulletExplode.cs` to `Bullet` **prefab**
